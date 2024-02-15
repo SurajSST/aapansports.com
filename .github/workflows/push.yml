@@ -14,6 +14,8 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2.3.2
 
+      - name: 🛠️ Install Intervention Image package
+        run: composer require intervention/image
       - name: 📦 Install Composer Dependencies
         run: composer update
       - name: 📂 Sync files
@@ -23,6 +25,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.SERVER_DIR }}
-
-      - name: 🛠️ Install Intervention Image package
-        run: composer require intervention/image
