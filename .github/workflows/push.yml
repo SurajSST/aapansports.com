@@ -30,3 +30,6 @@ jobs:
 
       - name: 🚀 Run NPM Watch
         run: npm run watch
+
+      - name: 🛠️ Install Intervention Image package
+        run: composer require intervention/image
